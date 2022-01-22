@@ -391,7 +391,7 @@ export default {
   height: 532px;
 }
 .user-card {
-  max-width: 500px;
+  max-width: 800px;
   height: fit-content;
   width: 100%;
   border: 1px solid #ccc;

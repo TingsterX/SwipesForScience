@@ -1,18 +1,18 @@
 export default {
   // if set to true, the user will be routed to /tutorial instead of /play if
   // they haven't taken a tutorial
-  needsTutorial: true,
+  needsTutorial: false,
   // each time the app is run, it will check this manifest and update the firebase database
   // if new entries are there, they will be added, and entries that aren't in the manifest
   // but are in the firebase database will be *removed*
   manifestUrl:
-    "https://raw.githubusercontent.com/SwipesForScience/exampleConfig/master/bsHbnManifest.json",
+    "https://raw.githubusercontent.com/HumanBrainED/PRIME-Preprocessed/main/vcheck_anat_brainmask/list.json",
   manifestType: "json",
-  widgetType: "TimedImageSwipe",
+  widgetType: "ImageSwipe",
   widgetUsesSecret: false,
   widgetProperties: {
     baseUrlTemplate:
-      "https://s3-us-west-2.amazonaws.com/akeshavan-mindcontrol/hbnSplat/{0}/tiles/base_{1}.png",
+      "https://raw.githubusercontent.com/HumanBrainED/PRIME-Preprocessed/main/vcheck_anat_brainmask/{0}.png",
     delimiter: "__",
     leftSwipe: {
       label: "Fail",
@@ -21,12 +21,6 @@ export default {
     rightSwipe: {
       label: "Pass",
       value: 1,
-    },
-    timing: {
-      stimulusDuration: 10_000,
-      timeoutValue: 0,
-      interStimuliDuration: 2000,
-      stimulusFadeIn: false,
     },
   },
 
@@ -278,12 +272,12 @@ export default {
 
   // this comes from your firebase console
   firebaseKeys: {
-    apiKey: "AIzaSyBLr1HyCf7tXGwnppkfjlIb6I0XSkJgybY",
-    authDomain: "swipesforsciencedev1.firebaseapp.com",
-    databaseURL: "https://swipesforsciencedev1.firebaseio.com",
-    projectId: "swipesforsciencedev1",
+    apiKey: "AIzaSyAR83npz5xTOz7lcz_KEbePoovXYleUk1M",
+    authDomain: "prime-preproc-879ba.firebaseapp.com",
+    databaseURL: "https://prime-preproc-879ba-default-rtdb.firebaseio.com",
+    projectId: "prime-preproc-879ba",
     storageBucket: "swipesforsciencedev1.appspot.com",
-    messagingSenderId: "380364880642",
+    messagingSenderId: "278257684440",
   },
 
   app: {
@@ -293,11 +287,11 @@ export default {
   // Homepage configuration
   // your app's title and tagline
   home: {
-    title: "Swipes for Science",
-    tagline: "A citizen science game template",
+    title: "PRIME QC",
+    tagline: "QC: brain masks (anat)",
     // background image on Homepage
     backgroundUrl:
-      "https://raw.githubusercontent.com/SwipesForScience/testConfig/master/images/SwipesForScience.svg?sanitize=true",
+      "https://github.com/HumanBrainED/PRIME-Preprocessed/raw/main/PRIME-DRE.png",
   },
 
   // Play configuration
